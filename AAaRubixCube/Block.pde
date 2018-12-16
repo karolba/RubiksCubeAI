@@ -1,3 +1,19 @@
+int numberOfSides = 5;//<<< change this to change the size of the cube
+
+int n = numberOfSides;//better variable name
+int middle = n/2;
+
+boolean hasKeyboard = false;
+void mouseReleased() {
+  if(hasKeyboard)
+    Keyb.showVirtualKeyboard(getContext());
+  else
+    Keyb.hideVirtualKeyboard(getContext());
+    
+  hasKeyboard = !hasKeyboard;
+}
+
+
 class Block {
 
   PVector pos;

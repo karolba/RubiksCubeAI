@@ -4,9 +4,10 @@
 //dont go too big (trust me)
 //dont do even sized cubes (it wont work)
 //Have fun
-
+/*
 int numberOfSides = 25;//<<< change this to change the size of the cube
-float cubeSpeed = PI/20.0; //<<< this is the speed that the cube rotates 
+*/
+float cubeSpeed = PI*5.0; //<<< this is the speed that the cube rotates 
 
 /*
   some controls
@@ -30,20 +31,21 @@ color yellow = color(255, 255, 0);
 color orange =  color(255, 140, 0);
 
 
-
+/*
 int n = numberOfSides;//better variable name
 int middle = n/2;
+*/
 int faceWidth = blockWidth;
 int blacksShown = 0;
 int speedUpCounter = 1;
-boolean pause = true;
+boolean pause = false;
 int rotateYCounter = 0;
 int rotateXCounter = 0;
 Cube cube;
 int stageTestCounter =100;
 int scrambleCounter = 100;
 String turns = "";
-ArrayList<TurnO> turnOs = new ArrayList();
+ArrayList<TurnO> turnOs = new ArrayList<TurnO>();
 
 int moveCount = 0;
 int solveCounter =0;
@@ -53,12 +55,12 @@ float  XRotationCompensation = 0;
 float  YRotationCompensation = 0;
 float  ZRotationCompensation = 0;
 
-ArrayList<String> rotations = new ArrayList();
+ArrayList<String> rotations = new ArrayList<String>();
 int[] turnCounter = new int[7];
 
 float spinCounter =0;
 
-boolean lockRotation = true;
+boolean lockRotation = false;
 float xRotationKey = 0;
 float yRotationKey = 0;
 float xRotationKeyTarget = 0;

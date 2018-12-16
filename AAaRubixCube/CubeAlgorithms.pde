@@ -195,7 +195,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
 
     //so now its up and front
     Block[][] frontFace = cube.getFace('F');
-    ArrayList<Integer> parityPositions = new ArrayList();
+    ArrayList<Integer> parityPositions = new ArrayList<Integer>();
     //get all the positions which are shit
     for (int i = 1; i< n-1; i++) {
       if (frontFace[i][0].getFace(c1) != f1) {
@@ -449,7 +449,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
   boolean edgeFinished(char f1, char f2) {
     Block[][] face1 = cube.getFace(f1);
     Block[][] face2 = cube.getFace(f2);
-    ArrayList<Block> common = new ArrayList();
+    ArrayList<Block> common = new ArrayList<Block>();
     for (int i = 0; i< n; i++) {
       for (int j = 0; j< n; j++) {
         if (i==0 || i==n-1 || j==0 || j==n-1 ) {
@@ -477,7 +477,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
   boolean edgeFinishedWithRotation(char f1, char f2) {
     Block[][] face1 = cube.getFace(f1);
     Block[][] face2 = cube.getFace(f2);
-    ArrayList<Block> common = new ArrayList();
+    ArrayList<Block> common = new ArrayList<Block>();
     for (int i = 0; i< n; i++) {
       for (int j = 0; j< n; j++) {
         if (i==0 || i==n-1 || j==0 || j==n-1 ) {
@@ -514,7 +514,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
   }
 
   ArrayList<TurnO> getEdgeFlippingTurns(char leftFace, char rightFace) {
-    ArrayList<TurnO> t = new ArrayList();
+    ArrayList<TurnO> t = new ArrayList<TurnO>();
     //println(leftFace, rightFace);
     t.add(charToTurnO(rightFace, true));
     t.add(charToTurnO(leftFace, false));
@@ -524,7 +524,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
     return t;
   }
   ArrayList<TurnO> getEdgeFlippingTurns() {
-    ArrayList<TurnO> t = new ArrayList();
+    ArrayList<TurnO> t = new ArrayList<TurnO>();
     t.add(charToTurnO('R', true));
     t.add(charToTurnO('F', false));
     t.add(charToTurnO('U', true));
@@ -679,7 +679,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
     if (faceNo == 4) {
       faces = "R";//left is where we store shit
     }
-    ArrayList<TurnO> adds = new ArrayList();
+    ArrayList<TurnO> adds = new ArrayList<TurnO>();
     char faceChar = 'N';
     boolean found = false;
     for (int i = 0; i< faces.length(); i++) { 
@@ -766,7 +766,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
     if (faceNo ==4) {
       faces = "FB";
     }
-    ArrayList<TurnO> adds = new ArrayList();
+    ArrayList<TurnO> adds = new ArrayList<TurnO>();
     char faceChar = 'N';
     int x = 0;
     int y =0;
@@ -1118,7 +1118,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
       if (!cube.blocks[middle][0][middle - i].matchesColors(blue)) {
 
         String faces = "LRBF";
-        ArrayList<TurnO> adds = new ArrayList();
+        ArrayList<TurnO> adds = new ArrayList<TurnO>();
         char faceChar = 'N';
         boolean found = false;
         for (int k = 0; k< faces.length(); k++) { 
@@ -1284,7 +1284,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
   void fillFaceGap(char targetFace, color pieceColor, int xIndex, int yIndex, int axis, int rowNo) {
 
     String faces = "LRB";
-    ArrayList<TurnO> adds = new ArrayList();
+    ArrayList<TurnO> adds = new ArrayList<TurnO>();
     char faceChar = 'N';
     boolean found = false;
     for (int i = 0; i< faces.length(); i++) { 
@@ -1334,7 +1334,7 @@ class CubeAlgorithms { //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// /
   void getToLRB(char targetFace, color pieceColor, int xIndex, int yIndex, int axis, int rowNo) {
     //println("lolololololololololo ");
     String faces = "DFU";
-    ArrayList<TurnO> adds = new ArrayList();
+    ArrayList<TurnO> adds = new ArrayList<TurnO>();
     char faceChar = 'N';
     int x = 0;
     int y =0;

@@ -23,7 +23,7 @@ ArrayList<TurnO> getTurnObjects(char fromFace, char toFace, int index, int ideal
 
 //move edge to front left if not alreay in the middle row
 ArrayList<TurnO> moveEdgeToFrontLeft(char face1, char face2) {
-  ArrayList<TurnO> returnList = new ArrayList();
+  ArrayList<TurnO> returnList = new ArrayList<TurnO>();
   String middleRowFaces = "FRBL";
   boolean face1Middle = middleRowFaces.indexOf(face1) != -1;
   boolean face2Middle = middleRowFaces.indexOf(face2) != -1;
@@ -58,7 +58,7 @@ ArrayList<TurnO> moveEdgeToFrontLeft(char face1, char face2) {
 //move edge to front right 
 ArrayList<TurnO> moveEdgeToFrontRight(char face1, char face2) {
 
-  ArrayList<TurnO> returnList = new ArrayList();
+  ArrayList<TurnO> returnList = new ArrayList<TurnO>();
   String middleRowFaces = "FRBL";
   boolean face1Middle = middleRowFaces.indexOf(face1) != -1;
   boolean face2Middle = middleRowFaces.indexOf(face2) != -1;
@@ -166,7 +166,7 @@ String getDirection(char fromFace, char toFace) {
 
 
 ArrayList<TurnO> foundRotationGimmeObj(int fromIndex, int toIndex, int index, int axis, int idealAxis) {
-  ArrayList<TurnO> turns = new ArrayList();
+  ArrayList<TurnO> turns = new ArrayList<TurnO>();
   TurnO t = new TurnO(idealAxis, index, true);
   if (abs(fromIndex - toIndex) == 2) {
     turns.add(t);

@@ -3,10 +3,10 @@ class Cube {
   int rotationAxis = 0;
   int rotatingIndex = 0;
   float rotationAngle = 0;
-  ArrayList<Block> rotatingBlocks = new ArrayList();
-  ArrayList<Block> showingBlack = new ArrayList();
+  ArrayList<Block> rotatingBlocks = new ArrayList<Block>();
+  ArrayList<Block> showingBlack = new ArrayList<Block>();
   int counter = 0;
-  ArrayList<ArrayList<Block>> cycleLists = new ArrayList();
+  ArrayList<ArrayList<Block>> cycleLists = new ArrayList<ArrayList<Block>>();
   Block centerBlock = new Block(new PVector(0, 0, 0));
   boolean turning = false;
   boolean turningClockwise = true;
@@ -198,7 +198,7 @@ class Cube {
     turning = true;
     this.turningClockwise = turnClockwise;
     cycleLists = getAllBlocksToRotate(index, xOrYOrZ);
-    rotatingBlocks = new ArrayList();
+    rotatingBlocks = new ArrayList<Block>();
     for (int i = 0; i < cycleLists.size(); i++) {
       rotatingBlocks.addAll(cycleLists.get(i));
     }
@@ -207,7 +207,7 @@ class Cube {
   }
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------
   ArrayList<ArrayList<Block>> getAllBlocksToRotate(int index, int xOrYOrZ) {
-    ArrayList<ArrayList<Block>>  temp = new ArrayList();   
+    ArrayList<ArrayList<Block>>  temp = new ArrayList<ArrayList<Block>>();   
     if (index ==0 || index ==n-1) {
       for (int i  = 0; i < floor((numberOfSides+1)/2); i++) {
         temp.add(getList(index, xOrYOrZ, i));
@@ -326,7 +326,7 @@ class Cube {
   //returns them in an order going clockwise around the center
   //todo only works for 3 length rubix cube
   ArrayList<Block> getList(int index, int xOrYOrZ, int listNumber) {
-    ArrayList<Block> list = new ArrayList();
+    ArrayList<Block> list = new ArrayList<Block>();
     int i = 0;
     int j = 0;
     int k = 0;
